@@ -96,7 +96,12 @@ textarea {
    ========================================================================== */
 
 body {
-    background-color:yellow;
+    background:url(../img/feud-board.jpg) no-repeat top center #000;
+    background-size: cover;
+}
+
+#board-wrap {
+    margin-top:10%;
 }
 
 a {
@@ -104,9 +109,11 @@ a {
 }
 
 .container {
-    width:70%;
-    margin:150px auto 0;
-    padding:0;
+    width:1100px;
+    background:#000;
+    padding:15px 10px;
+    overflow:auto;
+    margin:0 auto;
 }
 
 .col {
@@ -115,25 +122,41 @@ a {
     padding:0;
 }
 
-#title-wrap h1 {
-    text-align:center;
+#title-wrap {
+    width:250px;
+    margin:0 auto;
+    background:#000;
+    padding:15px;
+}
+
+#title-wrap img {
+    width:100%;
 }
 
 .list-wrapper a {
     margin:15px 10px;
     display:block;
     padding:25px 0;
-    border:1px solid red;
     background-color:#fff;
     text-align:center;
     text-decoration:none;
     color:#fff;
     cursor:pointer;
+    background:url(../img/inactive.jpg) repeat-x top left;
+    text-indent:-9999px;
+    border:1px solid #142550;
+    font-weight:bold;
+    font-size:25px;
+    letter-spacing:1px;
+    text-shadow:1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .list-wrapper a.show {
     color:white;
     background-color:blue;
+    text-indent:0;
+    background:url(../img/activated.jpg) repeat-x top left;
+    border:1px solid #fff;
 }
 
 #controls-wrap {
@@ -141,7 +164,7 @@ a {
     bottom:0;
     left:0;
     width:100%;
-    background-color:#000;
+    background-color:#fff;
     padding:15px 0 25px;
 }
 
@@ -154,7 +177,7 @@ a {
 }
 
 #controls-wrap ul li a {
-    color:#fff;
+    color:#000;
 }
 
 
