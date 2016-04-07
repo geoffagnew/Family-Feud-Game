@@ -96,12 +96,12 @@ textarea {
    ========================================================================== */
 
 body {
-    background:url(../img/feud-board.jpg) no-repeat center center fixed #000;
+    /*background:url(../img/feud-board.jpg) no-repeat center center fixed #000;*/
     background-size: cover;
 }
 
 #board-wrap {
-    margin-top:10%;
+    margin-top:5%;
 }
 
 a {
