@@ -1,5 +1,7 @@
 {
-	"round1": [ "Boonen", "Cancellera", "Vanmarcke", "Stybar", "Terpstra", "Boom" ],
-	"round2": [ "Lowry", "Derozen", "Valaciunas", "Biyombo", "Joseph" ],
-	"round3": [ "Jordan", "Pippen", "Rodman", "Grant", "Jackson" ]
+	"rounds": [
+		[ "Boonen", "Cancellera", "Vanmarcke", "Stybar", "Terpstra", "Boom" ],
+		[ "Lowry", "Derozen", "Valaciunas", "Biyombo", "Joseph" ],
+		[ "Jordan", "Pippen", "Rodman", "Grant", "Jackson" ]
+	]
 }

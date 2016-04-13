@@ -1,30 +1,68 @@
+// {
+// 	"round1": [ "Boonen", "Cancellera", "Vanmarcke", "Stybar", "Terpstra", "Boom" ],
+// 	"round2": [ "Lowry", "Derozen", "Valaciunas", "Biyombo", "Joseph" ],
+// 	"round3": [ "Jordan", "Pippen", "Rodman", "Grant", "Jackson" ]
+// }
+
 
 var xhr = new XMLHttpRequest(); // Create XMLHttp Object
 
 xhr.onload = function () { // when ready state changes
-		responseObject = JSON.parse(xhr.responseText); 
-		var round1Collected = responseObject.round1;
-		var round2Collected = responseObject.round2;
-		var round3Collected = responseObject.round3;
+		responseObject = JSON.parse(xhr.responseText);
+		var rounds = responseObject.rounds; 
+		roundsLength = rounds.length;
+		// for (var i = 0; i < roundsLength; i++) {
+		// 	console.log(rounds[i]);
+		// }
+		// console.log(roundsLength);
+		// var round1Collected = responseObject.round1;
+		// var round2Collected = responseObject.round2;
+		// var round3Collected = responseObject.round3;
 		
 	function getTarget(e) {
 		return e.target || e.srcElement;
 	}
 
 	// Load Round 1 by default
-	populateBoard(round1Collected);
+	// populateBoard(round1Collected);
+
+	// load the links to control round display
+	function buildRounds() {
+		// count the number of parent items in array
+		for (var i = 0; i < roundsLength; i++) {
+			var stepUp = i + 1;
+			// build links for each element in array
+			var listItem = document.createElement('li');
+			var elem = document.createElement('a');
+			listItem.appendChild(elem);
+			var link = elem.setAttribute('href', '#');
+			var countId = elem.setAttribute('id', [i]);
+			var newText = document.createTextNode('Round' + stepUp);
+			elem.appendChild(newText);
+			var position = document.getElementById('rounds-control');
+			position.appendChild(listItem);
+		}
+	}
+
+	buildRounds();
 
 	// pick the array to display
 	function roundSwitcher(e) {
+		// get the selected link
 		var target = getTarget(e);
-		var linkText = target.textContent;
+		// get the text of selected link
+		var countId = target.getAttribute('id'); 
+		console.log(countId);
 		var roundHolder;
-		if (linkText === 'Round1') {
-			roundHolder = populateBoard(round1Collected);
-		} else if (linkText == 'Round2') {
-			roundHolder = populateBoard(round2Collected);
+		// 
+		if (countId === '0') {
+			roundHolder = populateBoard(rounds[0]);
+			// console.log('round 1 clicked');
+		} else if (countId === '1') {
+			roundHolder = populateBoard(rounds[1]);
+			// console.log('round 2 clicked');
 		} else {
-			roundHolder = populateBoard(round3Collected);
+			roundHolder = populateBoard(rounds[2]);
 		}
 	}
 
