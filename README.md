@@ -10,6 +10,6 @@ JavaScript driven Family Feud Interface. Answers are delivered via separate JSON
 
 **Note:** JSON data will not load in Chrome locally. If you want to view locally use Firefox. 
 
-** View demo: <http://sumnerpowell.com/dev/Family-Feud-Game//> **
+[View Demo](http://sumnerpowell.com/dev/Family-Feud-Game/)
 
 
