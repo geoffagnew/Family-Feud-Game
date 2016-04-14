@@ -95,10 +95,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/*body {
+body {
     background:url(../img/feud-board.jpg) no-repeat center center fixed #000;
     background-size: cover;
-}*/
+}
 
 #board-wrap {
     margin-top:5%;

@@ -1,30 +1,17 @@
-// {
-// 	"round1": [ "Boonen", "Cancellera", "Vanmarcke", "Stybar", "Terpstra", "Boom" ],
-// 	"round2": [ "Lowry", "Derozen", "Valaciunas", "Biyombo", "Joseph" ],
-// 	"round3": [ "Jordan", "Pippen", "Rodman", "Grant", "Jackson" ]
-// }
-
-
+	
 var xhr = new XMLHttpRequest(); // Create XMLHttp Object
 
 xhr.onload = function () { // when ready state changes
 		responseObject = JSON.parse(xhr.responseText);
 		var rounds = responseObject.rounds; 
 		roundsLength = rounds.length;
-		// for (var i = 0; i < roundsLength; i++) {
-		// 	console.log(rounds[i]);
-		// }
-		// console.log(roundsLength);
-		// var round1Collected = responseObject.round1;
-		// var round2Collected = responseObject.round2;
-		// var round3Collected = responseObject.round3;
 		
 	function getTarget(e) {
 		return e.target || e.srcElement;
 	}
 
 	// Load Round 1 by default
-	// populateBoard(round1Collected);
+	populateBoard(rounds[0]);
 
 	// load the links to control round display
 	function buildRounds() {
@@ -52,18 +39,7 @@ xhr.onload = function () { // when ready state changes
 		var target = getTarget(e);
 		// get the text of selected link
 		var countId = target.getAttribute('id'); 
-		console.log(countId);
-		var roundHolder;
-		// 
-		if (countId === '0') {
-			roundHolder = populateBoard(rounds[0]);
-			// console.log('round 1 clicked');
-		} else if (countId === '1') {
-			roundHolder = populateBoard(rounds[1]);
-			// console.log('round 2 clicked');
-		} else {
-			roundHolder = populateBoard(rounds[2]);
-		}
+		populateBoard(rounds[countId]);
 	}
 
 	// display the array
