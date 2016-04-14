@@ -4,10 +4,12 @@ JavaScript driven Family Feud Interface. Answers are delivered via separate JSON
 
 ## Configuration
 
-1. Open the rounds.json file
-2. Create as many arrays within the "rounds" object as you like
+1. Open the rounds.json file.
+2. Create as many arrays within the "rounds" object as you like.
 3. Save the rounds.json file. That's it. The code will dynamically create anchor links to trigger each round at the bottom of the page.
 
-NOTE: JSON data will not load in Chrome locally. If you want to view locally use Firefox. 
+**Note:** JSON data will not load in Chrome locally. If you want to view locally use Firefox. 
+
+** View demo: <http://sumnerpowell.com/dev/Family-Feud-Game//> **
 
 
